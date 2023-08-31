@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+     body{
+        background-color: black;
+        color:antiquewhite;
+     }
+     div#form{
+        background-color: rgb(107, 91, 91);
+        width:250px;
+        border:none;
+        border-radius: 20px;   
+     }
+
+     #result{
+        padding:5px;
+        
+     }
+     #submit{
+        border:none;
+        border-radius: 5px;
+     }
+     @media only screen and (min-width:600px){
+        div#form{
+            background-color: rgb(107, 91, 91);
+            width:600px;
+            border:none;
+            border-radius: 20px; 
+        }
+    }
+    </style>
+</head>
+<body><center><div id="form">
+    <div>
+        <h1> QUIZ </h1>
+    </div>
+    <div id="1q">
+        <p>1. Which animal is known as the "Ship of the Dessert"?</p>
+        <div>
+        <input type="radio" name="1" id="" >Goat<br>
+        <input type="radio" name="1" id="1a" >Camel<br>
+        <input type="radio" name="1" id="" >Donkey<br>    
+    </div>
+    </div>
+    <div id="2q">
+        <p>2. Baby frog is Known as..</p>
+        <div>
+        <input type="radio" name="2" id="2a" >Tadpole<br>
+        <input type="radio" name="2" id="" >Young Frog<br>
+        <input type="radio" name="2" id="">Adult Frog<br>    
+    </div>
+    </div>
+    <div id="3q">
+        <p>3. Name the National Fruit of India?</p>
+        <div>
+        <input type="radio" name="3" id="" >Grape<br>
+        <input type="radio" name="3" id="" >Orange<br>
+        <input type="radio" name="3" id="3a" >Mango<br>    
+    </div>
+    </div>
+    <div id="2q">
+        <p>4. Which colour symbolises  peace?</p>
+        <div>
+        <input type="radio" name="4" id="4a" >White<br>
+        <input type="radio" name="4" id="" >Blue<br>
+        <input type="radio" name="4" id="" >Green<br>    
+    </div>
+    </div>
+    <div id="5q">
+        <p>5. Name the largest Planet in our Solar System </p>
+        <div>
+        <input type="radio" name="5" id="" >Mars<br>
+        <input type="radio" name="5" id="5a">Jupitor<br>
+        <input type="radio" name="5" id="" >Earth<br>    
+    </div><div id="Ans">
+    <p>The No.of correct answers: </p>
+    <div id="result">
+     </div>  
+    </div>
+    </div>
+    <div>
+        <input type="submit" value="CHECK" onclick="cal()" id="submit">
+    </div>
+    </div>
+   <script>
+    function cal(){
+        var ans1=document.getElementById('1a');
+        var ans2=document.getElementById('2a');
+        var ans3=document.getElementById('3a');
+        var ans4=document.getElementById('4a');
+        var ans5=document.getElementById('5a');
+        var value=0;
+        if(ans1.checked){
+            value+=1;
+        }
+        if(ans2.checked){
+            value+=1;
+        }
+        if(ans3.checked){
+            value+=1;
+        }
+        if(ans4.checked){
+            value+=1;
+        }
+        if(ans5.checked){
+            value+=1;
+        }
+        if(value!=0){
+        document.querySelector("#result").innerHTML=value;
+        }
+        else{
+            document.querySelector("#result").innerHTML=" 0 ,make a trail again";  
+        }
+
+    }
+    </script>
+    </center>
+</body>
+</html>
